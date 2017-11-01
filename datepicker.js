@@ -28,7 +28,7 @@ var datepicker_langs = {
   }
 }
 
-class DatePicker {
+export default class DatePicker {
   constructor(selector, options) {
     if (!options) options = {}
 
