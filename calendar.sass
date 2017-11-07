@@ -5,6 +5,9 @@ $calendar-date-hover: $white-ter !default
 $calendar-today-background: transparent !default
 $calendar-today-border-color: $primary !default
 $calendar-today-color: $primary !default
+$calendar-current-background: transparent !default
+$calendar-current-border-color: $primary !default
+$calendar-current-color: $primary !default
 
 =css3-prefix($property, $value)
   -webkit-#{$property}: #{$value}
@@ -92,6 +95,10 @@ $calendar-today-color: $primary !default
           background: $calendar-today-background
           border-color: $calendar-today-border-color
           color: $calendar-today-color
+        &.is-current
+          background: $calendar-current-background
+          border-color: $calendar-current-border-color
+          color: $calendar-current-color
         &:focus
           background: $calendar-date-hover
           border-color: $calendar-date-hover
