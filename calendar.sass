@@ -73,6 +73,11 @@ $calendar-current-color: $primary !default
     .calendar-date
       border: 0
       padding: .4rem
+      &.is-current
+        .date-item
+          background: $calendar-current-background
+          border-color: $calendar-current-border-color
+          color: $calendar-current-color
       .date-item
         appearance: none
         background: transparent
@@ -109,10 +114,6 @@ $calendar-current-color: $primary !default
           background: $primary
           border-color: $primary
           color: findColorInvert( $primary )
-        .is-current
-          background: $calendar-current-background
-          border-color: $calendar-current-border-color
-          color: $calendar-current-color
       &.is-disabled,
       &[disabled]
         .date-item, .calendar-event
