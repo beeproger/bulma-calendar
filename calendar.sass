@@ -73,6 +73,10 @@ $calendar-current-color: $primary !default
     .calendar-date
       border: 0
       padding: .4rem
+      &.is-current
+        background: $calendar-current-background
+        border-color: $calendar-current-border-color
+        color: $calendar-current-color
       .date-item
         appearance: none
         background: transparent
@@ -95,10 +99,6 @@ $calendar-current-color: $primary !default
           background: $calendar-today-background
           border-color: $calendar-today-border-color
           color: $calendar-today-color
-        &.is-current
-          background: $calendar-current-background
-          border-color: $calendar-current-border-color
-          color: $calendar-current-color
         &:focus
           background: $calendar-date-hover
           border-color: $calendar-date-hover
