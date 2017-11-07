@@ -34,6 +34,7 @@ export default class DatePicker {
 
     var defaultOptions = {
       startDate: new Date(),
+      currentDate: new Date(),
       // the default data format `field` value
       dataFormat: 'yyyy/mm/dd',
       // internationalization
@@ -117,7 +118,12 @@ export default class DatePicker {
     var newDayContainer = document.createElement('div');
     var newDay = document.createElement('div');
     var newDayButton = document.createElement('button');
-
+    var isCurrentDay = false
+    
+    if(_this.month == month && _this.year == year && _this.options.currentDate.getDate() == day) {
+      isCurrentDay = true
+    }
+    
     newDayButton.classList.add('date-item');
     newDayButton.innerHTML = day;
     newDayButton.addEventListener('click', function (e) {
@@ -156,6 +162,10 @@ export default class DatePicker {
     if (isSelectedOut) {
       newDayContainer.classList.add('range-end');
     }
+    if (isCurrentDay) {
+      newDayContainer.classList.add('is-current');
+    }
+
 
     return newDayContainer;
   }
